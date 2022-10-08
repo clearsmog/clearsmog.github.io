@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Simple Engineer Blog</title>
-    <link>http://example.org/</link>
+    <link>https://clearsmog.github.io/</link>
     <description>Recent content on The Simple Engineer Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Oct 2022 15:44:11 +0800</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Oct 2022 15:44:11 +0800</lastBuildDate><atom:link href="https://clearsmog.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mypost</title>
-      <link>http://example.org/posts/mypost/</link>
+      <link>https://clearsmog.github.io/posts/mypost/</link>
       <pubDate>Sat, 08 Oct 2022 15:44:11 +0800</pubDate>
       
-      <guid>http://example.org/posts/mypost/</guid>
+      <guid>https://clearsmog.github.io/posts/mypost/</guid>
       <description>public static void main(String[] args) { System.out.println(&amp;#34;This is a print statement&amp;#34;); } </description>
     </item>
     
