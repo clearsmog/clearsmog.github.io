@@ -1,6 +1,6 @@
 {
-  "name": "Qiankun",
-  "short_name": "Qiankun",
+  "name": "WebBook",
+  "short_name": "WebBook",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

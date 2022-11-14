@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Docs on Qiankun</title>
+    <title>Docs on WebBook</title>
     <link>https://clearsmog.github.io/docs/</link>
-    <description>Recent content in Docs on Qiankun</description>
+    <description>Recent content in Docs on WebBook</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 11 Oct 2022 21:15:03 +0800</lastBuildDate><atom:link href="https://clearsmog.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
   </channel>
