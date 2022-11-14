@@ -1,19 +1,87 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The Simple Engineer Blog</title>
+    <title>首页 on Qiankun</title>
     <link>https://clearsmog.github.io/</link>
-    <description>Recent content on The Simple Engineer Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 08 Oct 2022 15:44:11 +0800</lastBuildDate><atom:link href="https://clearsmog.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in 首页 on Qiankun</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://clearsmog.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Mypost</title>
-      <link>https://clearsmog.github.io/posts/mypost/</link>
-      <pubDate>Sat, 08 Oct 2022 15:44:11 +0800</pubDate>
+      <title>Basic</title>
+      <link>https://clearsmog.github.io/docs/cpp/basic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://clearsmog.github.io/posts/mypost/</guid>
-      <description>public static void main(String[] args) { System.out.println(&amp;#34;This is a print statement&amp;#34;); } </description>
+      <guid>https://clearsmog.github.io/docs/cpp/basic/</guid>
+      <description>基础 # 语法 # 面向对象 # 1234</description>
+    </item>
+    
+    <item>
+      <title>Basic Algorithm</title>
+      <link>https://clearsmog.github.io/docs/algorithms/basic_algorithm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clearsmog.github.io/docs/algorithms/basic_algorithm/</guid>
+      <description>基础算法 # 快速排序 # void quick_sort(int q[], int l, int r) { if (l &amp;gt;= r) return; int i = l - 1, j = r + 1, x = q[l + r &amp;gt;&amp;gt; 1]; while (i &amp;lt; j) { do i ++ ; while (q[i] &amp;lt; x); do j -- ; while (q[j] &amp;gt; x); if (i &amp;lt; j) swap(q[i], q[j]); } quick_sort(q, l, j), quick_sort(q, j + 1, r); } 归并排序 # void merge_sort(int q[], int l, int r) { if (l &amp;gt;= r) return; int mid = l + r &amp;gt;&amp;gt; 1; merge_sort(q, l, mid); merge_sort(q, mid + 1, r); int k = 0, i = l, j = mid + 1; while (i &amp;lt;= mid &amp;amp;&amp;amp; j &amp;lt;= r) if (q[i] &amp;lt;= q[j]) tmp[k ++ ] = q[i ++ ]; else tmp[k ++ ] = q[j ++ ]; while (i &amp;lt;= mid) tmp[k ++ ] = q[i ++ ]; while (j &amp;lt;= r) tmp[k ++ ] = q[j ++ ]; for (i = l, j = 0; i &amp;lt;= r; i ++, j ++ ) q[i] = tmp[j]; } 整数二分 # bool check(int x) {/* .</description>
+    </item>
+    
+    <item>
+      <title>Data Structure</title>
+      <link>https://clearsmog.github.io/docs/algorithms/data_structure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clearsmog.github.io/docs/algorithms/data_structure/</guid>
+      <description> 数据结构 # 单链表 # // head存储链表头，e[]存储节点的值，ne[]存储节点的next指针，idx表示当前用到了哪个节点 int head, e[N], ne[N], idx; // 初始化 void init() { head = -1; idx = 0; } // 在链表头插入一个数a void insert(int a) { e[idx] = a, ne[idx] = head, head = idx ++ ; } // 将头结点删除，需要保证头结点存在 void remove() { head = ne[head]; } 双链表 # // e[]表示节点的值，l[]表示节点的左指针，r[]表示节点的右指针，idx表示当前用到了哪个节点 int e[N], l[N], r[N], idx; // 初始化 void init() { //0是左端点，1是右端点 r[0] = 1, l[1] = 0; idx = 2; } // 在节点a的右边插入一个数x void insert(int a, int x) { e[idx] = x; l[idx] = a, r[idx] = r[a]; l[r[a]] = idx, r[a] = idx ++ ; } // 删除节点a void remove(int a) { l[r[a]] = l[a]; r[l[a]] = r[a]; } 栈 # // tt表示栈顶 int stk[N], tt = 0; // 向栈顶插入一个数 stk[ ++ tt] = x; // 从栈顶弹出一个数 tt -- ; // 栈顶的值 stk[tt]; // 判断栈是否为空 if (tt &amp;gt; 0) { } 队列 # // hh 表示队头，tt表示队尾 int q[N], hh = 0, tt = -1; // 向队尾插入一个数 q[ ++ tt] = x; // 从队头弹出一个数 hh ++ ; // 队头的值 q[hh]; // 判断队列是否为空 if (hh &amp;lt;= tt) { } </description>
+    </item>
+    
+    <item>
+      <title>Project</title>
+      <link>https://clearsmog.github.io/docs/cpp/project/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clearsmog.github.io/docs/cpp/project/</guid>
+      <description> 项目 # 描述 # 实现 # </description>
+    </item>
+    
+    <item>
+      <title>骑行Sembawang</title>
+      <link>https://clearsmog.github.io/posts/sembawang/</link>
+      <pubDate>Wed, 19 Oct 2022 10:46:43 +0800</pubDate>
+      
+      <guid>https://clearsmog.github.io/posts/sembawang/</guid>
+      <description>Sembawang 位于中北部，在动物园的西北方向
+岛上唯一开放的天然温泉 温泉蛋 码头上的钓鱼者 傍晚游泳的人 眺望对面的女子 </description>
+    </item>
+    
+    <item>
+      <title>Kranji</title>
+      <link>https://clearsmog.github.io/posts/kranji/</link>
+      <pubDate>Wed, 12 Oct 2022 15:20:04 +0800</pubDate>
+      
+      <guid>https://clearsmog.github.io/posts/kranji/</guid>
+      <description>到达时间上午，从裕廊西骑过去大概一个小时。 蓄水池地图 清晨的星马海峡 </description>
+    </item>
+    
+    <item>
+      <title>Grep</title>
+      <link>https://clearsmog.github.io/docs/linux/grep/</link>
+      <pubDate>Tue, 11 Oct 2022 21:15:03 +0800</pubDate>
+      
+      <guid>https://clearsmog.github.io/docs/linux/grep/</guid>
+      <description>grep命令 # 作用 # 查找文件中符合要求的字符串。
+实例 # grep test *file 在当前目录中查找后缀有file的文件中包含test字符串的文件。
+grep -r update /etc/acpi 以递归的方式查找，指定查找目录为&amp;quot;/etc/acpi&amp;quot;
+grep -v test *test* 反向查找，&amp;quot;-v&amp;quot; 参赛用于打印出不符合条件行的内容。</description>
+    </item>
+    
+    <item>
+      <title>Neovim</title>
+      <link>https://clearsmog.github.io/docs/linux/neovim/</link>
+      <pubDate>Tue, 11 Oct 2022 21:14:03 +0800</pubDate>
+      
+      <guid>https://clearsmog.github.io/docs/linux/neovim/</guid>
+      <description>neovim # vim教程 # 参考 VimTutor
+现成配置框架 # LunarVim
+NVchad
+AstroNvim</description>
     </item>
     
   </channel>

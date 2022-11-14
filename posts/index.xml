@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on The Simple Engineer Blog</title>
+    <title>Blog on Qiankun</title>
     <link>https://clearsmog.github.io/posts/</link>
-    <description>Recent content in Posts on The Simple Engineer Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 08 Oct 2022 15:44:11 +0800</lastBuildDate><atom:link href="https://clearsmog.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Blog on Qiankun</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://clearsmog.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Mypost</title>
-      <link>https://clearsmog.github.io/posts/mypost/</link>
-      <pubDate>Sat, 08 Oct 2022 15:44:11 +0800</pubDate>
+      <title>骑行Sembawang</title>
+      <link>https://clearsmog.github.io/posts/sembawang/</link>
+      <pubDate>Wed, 19 Oct 2022 10:46:43 +0800</pubDate>
       
-      <guid>https://clearsmog.github.io/posts/mypost/</guid>
-      <description>public static void main(String[] args) { System.out.println(&amp;#34;This is a print statement&amp;#34;); } </description>
+      <guid>https://clearsmog.github.io/posts/sembawang/</guid>
+      <description>Sembawang 位于中北部，在动物园的西北方向
+岛上唯一开放的天然温泉 温泉蛋 码头上的钓鱼者 傍晚游泳的人 眺望对面的女子 </description>
+    </item>
+    
+    <item>
+      <title>Kranji</title>
+      <link>https://clearsmog.github.io/posts/kranji/</link>
+      <pubDate>Wed, 12 Oct 2022 15:20:04 +0800</pubDate>
+      
+      <guid>https://clearsmog.github.io/posts/kranji/</guid>
+      <description>到达时间上午，从裕廊西骑过去大概一个小时。 蓄水池地图 清晨的星马海峡 </description>
     </item>
     
   </channel>

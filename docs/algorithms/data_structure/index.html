@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content=" 数据结构 # 单链表 # // head存储链表头，e[]存储节点的值，ne[]存储节点的next指针，idx表示当前用到了哪个节点 int head, e[N], ne[N], idx; // 初始化 void init() { head = -1; idx = 0; } // 在链表头插入一个数a void insert(int a) { e[idx] = a, ne[idx] = head, head = idx &#43;&#43; ; } // 将头结点删除，需要保证头结点存在 void remove() { head = ne[head]; } 双链表 # // e[]表示节点的值，l[]表示节点的左指针，r[]表示节点的右指针，idx表示当前用到了哪个节点 int e[N], l[N], r[N], idx; // 初始化 void init() { //0是左端点，1是右端点 r[0] = 1, l[1] = 0; idx = 2; } // 在节点a的右边插入一个数x void insert(int a, int x) { e[idx] = x; l[idx] = a, r[idx] = r[a]; l[r[a]] = idx, r[a] = idx &#43;&#43; ; } // 删除节点a void remove(int a) { l[r[a]] = l[a]; r[l[a]] = r[a]; } 栈 # // tt表示栈顶 int stk[N], tt = 0; // 向栈顶插入一个数 stk[ &#43;&#43; tt] = x; // 从栈顶弹出一个数 tt -- ; // 栈顶的值 stk[tt]; // 判断栈是否为空 if (tt &gt; 0) { } 队列 # // hh 表示队头，tt表示队尾 int q[N], hh = 0, tt = -1; // 向队尾插入一个数 q[ &#43;&#43; tt] = x; // 从队头弹出一个数 hh &#43;&#43; ; // 队头的值 q[hh]; // 判断队列是否为空 if (hh &lt;= tt) { } ">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Data Structure" />
+<meta property="og:description" content=" 数据结构 # 单链表 # // head存储链表头，e[]存储节点的值，ne[]存储节点的next指针，idx表示当前用到了哪个节点 int head, e[N], ne[N], idx; // 初始化 void init() { head = -1; idx = 0; } // 在链表头插入一个数a void insert(int a) { e[idx] = a, ne[idx] = head, head = idx &#43;&#43; ; } // 将头结点删除，需要保证头结点存在 void remove() { head = ne[head]; } 双链表 # // e[]表示节点的值，l[]表示节点的左指针，r[]表示节点的右指针，idx表示当前用到了哪个节点 int e[N], l[N], r[N], idx; // 初始化 void init() { //0是左端点，1是右端点 r[0] = 1, l[1] = 0; idx = 2; } // 在节点a的右边插入一个数x void insert(int a, int x) { e[idx] = x; l[idx] = a, r[idx] = r[a]; l[r[a]] = idx, r[a] = idx &#43;&#43; ; } // 删除节点a void remove(int a) { l[r[a]] = l[a]; r[l[a]] = r[a]; } 栈 # // tt表示栈顶 int stk[N], tt = 0; // 向栈顶插入一个数 stk[ &#43;&#43; tt] = x; // 从栈顶弹出一个数 tt -- ; // 栈顶的值 stk[tt]; // 判断栈是否为空 if (tt &gt; 0) { } 队列 # // hh 表示队头，tt表示队尾 int q[N], hh = 0, tt = -1; // 向队尾插入一个数 q[ &#43;&#43; tt] = x; // 从队头弹出一个数 hh &#43;&#43; ; // 队头的值 q[hh]; // 判断队列是否为空 if (hh &lt;= tt) { } " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://clearsmog.github.io/docs/algorithms/data_structure/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2022-11-14T15:02:22+08:00" />
+
+<title>Data Structure | Qiankun</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.a82d7e77ceb134d151c4d7e381eeb30623fbd5a524d58c584d8716ecec0205bd.css" integrity="sha256-qC1&#43;d86xNNFRxNfjge6zBiP71aUk1YxYTYcW7OwCBb0=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.7007af51b53630badc529d29be8ffc52f67bcaa1e5eccf236d42deb18e938f8b.js" integrity="sha256-cAevUbU2MLrcUp0pvo/8UvZ7yqHl7M8jbULesY6Tj4s=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Qiankun</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6c53ca19511d45c29f9055edc76153f6" class="toggle" checked />
+    <label for="section-6c53ca19511d45c29f9055edc76153f6" class="flex justify-between">
+      <a href="/docs/algorithms/" class="">Algorithms</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/algorithms/basic_algorithm/" class="">Basic Algorithm</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/algorithms/data_structure/" class="active">Data Structure</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-0827e0d1250c844f8ed58e8385b998b0" class="toggle"  />
+    <label for="section-0827e0d1250c844f8ed58e8385b998b0" class="flex justify-between">
+      <a href="/docs/cpp/" class="">Cpp</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/cpp/basic/" class="">Basic</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/cpp/project/" class="">Project</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6ae1a891fb3a3f71d71273fc61b29b76" class="toggle"  />
+    <label for="section-6ae1a891fb3a3f71d71273fc61b29b76" class="flex justify-between">
+      <a href="/docs/linux/" class="">Linux</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/linux/grep/" class="">Grep</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/linux/neovim/" class="">Neovim</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/clearsmog" target="_blank" rel="noopener">
+        GitHub
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/" target="_blank" rel="noopener">
+        Hugo Theme
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Data Structure</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#数据结构">数据结构</a>
+      <ul>
+        <li><a href="#单链表">单链表</a></li>
+        <li><a href="#双链表">双链表</a></li>
+        <li><a href="#栈">栈</a></li>
+        <li><a href="#队列">队列</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="数据结构">
+  数据结构
+  <a class="anchor" href="#%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84">#</a>
+</h1>
+<h2 id="单链表">
+  单链表
+  <a class="anchor" href="#%e5%8d%95%e9%93%be%e8%a1%a8">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// head存储链表头，e[]存储节点的值，ne[]存储节点的next指针，idx表示当前用到了哪个节点
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> head, e[N], ne[N], idx;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 初始化
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">init</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    head <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    idx <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 在链表头插入一个数a
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insert</span>(<span style="color:#66d9ef">int</span> a)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    e[idx] <span style="color:#f92672">=</span> a, ne[idx] <span style="color:#f92672">=</span> head, head <span style="color:#f92672">=</span> idx <span style="color:#f92672">++</span> ;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 将头结点删除，需要保证头结点存在
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">remove</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    head <span style="color:#f92672">=</span> ne[head];
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="双链表">
+  双链表
+  <a class="anchor" href="#%e5%8f%8c%e9%93%be%e8%a1%a8">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// e[]表示节点的值，l[]表示节点的左指针，r[]表示节点的右指针，idx表示当前用到了哪个节点
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> e[N], l[N], r[N], idx;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 初始化
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">init</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//0是左端点，1是右端点
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    r[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, l[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    idx <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 在节点a的右边插入一个数x
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insert</span>(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> x)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    e[idx] <span style="color:#f92672">=</span> x;
+</span></span><span style="display:flex;"><span>    l[idx] <span style="color:#f92672">=</span> a, r[idx] <span style="color:#f92672">=</span> r[a];
+</span></span><span style="display:flex;"><span>    l[r[a]] <span style="color:#f92672">=</span> idx, r[a] <span style="color:#f92672">=</span> idx <span style="color:#f92672">++</span> ;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 删除节点a
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">remove</span>(<span style="color:#66d9ef">int</span> a)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    l[r[a]] <span style="color:#f92672">=</span> l[a];
+</span></span><span style="display:flex;"><span>    r[l[a]] <span style="color:#f92672">=</span> r[a];
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="栈">
+  栈
+  <a class="anchor" href="#%e6%a0%88">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// tt表示栈顶
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> stk[N], tt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 向栈顶插入一个数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>stk[ <span style="color:#f92672">++</span> tt] <span style="color:#f92672">=</span> x;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 从栈顶弹出一个数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>tt <span style="color:#f92672">--</span> ;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 栈顶的值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>stk[tt];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 判断栈是否为空
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (tt <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="队列">
+  队列
+  <a class="anchor" href="#%e9%98%9f%e5%88%97">#</a>
+</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">// hh 表示队头，tt表示队尾
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> q[N], hh <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, tt <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 向队尾插入一个数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>q[ <span style="color:#f92672">++</span> tt] <span style="color:#f92672">=</span> x;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 从队头弹出一个数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>hh <span style="color:#f92672">++</span> ;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 队头的值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>q[hh];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 判断队列是否为空
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (hh <span style="color:#f92672">&lt;=</span> tt)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/clearsmog/blog/commit/bea307695129ccb4d4225e03b4dd660291963bbc" title='Last modified by qiankun | November 14, 2022' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>November 14, 2022</span>
+    </a>
+  </div>
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/clearsmog/blog/edit/main//content/docs/algorithms/data_structure.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#数据结构">数据结构</a>
+      <ul>
+        <li><a href="#单链表">单链表</a></li>
+        <li><a href="#双链表">双链表</a></li>
+        <li><a href="#栈">栈</a></li>
+        <li><a href="#队列">队列</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

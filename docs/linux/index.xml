@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Qiankun</title>
+    <link>https://clearsmog.github.io/docs/linux/</link>
+    <description>Recent content in Linux on Qiankun</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://clearsmog.github.io/docs/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grep</title>
+      <link>https://clearsmog.github.io/docs/linux/grep/</link>
+      <pubDate>Tue, 11 Oct 2022 21:15:03 +0800</pubDate>
+      
+      <guid>https://clearsmog.github.io/docs/linux/grep/</guid>
+      <description>grep命令 # 作用 # 查找文件中符合要求的字符串。
+实例 # grep test *file 在当前目录中查找后缀有file的文件中包含test字符串的文件。
+grep -r update /etc/acpi 以递归的方式查找，指定查找目录为&amp;quot;/etc/acpi&amp;quot;
+grep -v test *test* 反向查找，&amp;quot;-v&amp;quot; 参赛用于打印出不符合条件行的内容。</description>
+    </item>
+    
+    <item>
+      <title>Neovim</title>
+      <link>https://clearsmog.github.io/docs/linux/neovim/</link>
+      <pubDate>Tue, 11 Oct 2022 21:14:03 +0800</pubDate>
+      
+      <guid>https://clearsmog.github.io/docs/linux/neovim/</guid>
+      <description>neovim # vim教程 # 参考 VimTutor
+现成配置框架 # LunarVim
+NVchad
+AstroNvim</description>
+    </item>
+    
+  </channel>
+</rss>
